@@ -21,7 +21,7 @@ describe("AgedBrie", function() {
     });
 
     it("Should not rise above 50", function() {
-      const agedBrie = new AgedBrie-2,49);
+      const agedBrie = new AgedBrie(-2,49);
       agedBrie.updateQuality();
       expect(agedBrie.quality).toEqual(50);
     });
