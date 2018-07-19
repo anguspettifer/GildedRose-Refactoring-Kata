@@ -3,7 +3,7 @@ describe("Foo", function() {
   it("The sellin should reduce by one", function() {
     const foo = new Foo(5,10);
     foo.updateSellIn();
-    expect(foo.sellIn()).toEqual(4);
+    expect(foo.sellIn).toEqual(4);
   });
 
   describe('quality', function(){
