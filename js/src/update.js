@@ -10,20 +10,28 @@
 
   Update.prototype.qualityIncreaseOne = function () {
     this.quality += 1
-    if (this.quality > 50) {
-      this.quality = 50
-    }
+    this.capQualityAtFifty()
   };
 
   Update.prototype.qualityReduceOne = function () {
     this.quality -= 1
+    this.floorQualityAtZero()
+  };
+
+  Update.prototype.qualitySetToZero = function () {
+    this.quality = 0
+  };
+
+  Update.prototype.floorQualityAtZero = function () {
     if (this.quality < 0) {
       this.quality = 0
     }
   };
 
-  Update.prototype.qualitySetToZero = function () {
-    this.quality = 0
+  Update.prototype.capQualityAtFifty = function () {
+    if (this.quality > 50) {
+      this.quality = 50
+    }
   };
 
   exports.Update = Update;
