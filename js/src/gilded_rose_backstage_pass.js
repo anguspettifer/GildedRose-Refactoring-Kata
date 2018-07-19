@@ -14,10 +14,12 @@
     } else if (this.sellIn > 5) {
       this.qualityIncreaseOne()
       this.qualityIncreaseOne()
-    } else if (this.sellIn > -1) {
+    } else if (this.sellIn > 0) {
       this.qualityIncreaseOne()
       this.qualityIncreaseOne()
       this.qualityIncreaseOne()
+    } else if (this.sellIn < 1) {
+      this.quality = 0
     }
     this.capQualityAtFifty()
   };

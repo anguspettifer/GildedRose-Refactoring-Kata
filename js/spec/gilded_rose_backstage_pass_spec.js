@@ -25,10 +25,10 @@ describe("BackstagePass", function() {
       expect(backstagePass.quality).toEqual(13);
     });
 
-    it("Should fall to zero when sell by date is less than zero", function() {
-      const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", -1, 10) ]);
-      const items = gildedRose.update();
-      expect(items[0].quality).toEqual(0);
+    it("Should fall to zero when sell by date is zero or less", function() {
+      const backstagePass = new BackstagePass(0,10);
+      backstagePass.updateQuality();
+      expect(backstagePass.quality).toEqual(0);
     });
 
     it("Should not rise above 50", function() {

@@ -125,6 +125,12 @@ describe("Gilded Rose", function() {
         expect(items[0].quality).toEqual(13);
       });
 
+      it("Should fall to zero when sell by date is zero or less", function() {
+        const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 0, 10) ]);
+        const items = gildedRose.update();
+        expect(items[0].quality).toEqual(0);
+      });
+
       it("Should not rise above 50", function() {
         const gildedRose = new Shop([ new Item("Backstage passes to a TAFKAL80ETC concert", 1, 50) ]);
         const items = gildedRose.update();
