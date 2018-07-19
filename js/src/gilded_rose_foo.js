@@ -1,30 +1,18 @@
+// spy time?
+
 (function(exports){
   function Foo(sellIn, quality){
     this.sellIn = sellIn
     this.quality = quality
-  };
-
-  Foo.prototype.updateSellIn = function () {
-    this.sellIn -= 1
+    this.update = new Update(sellIn, quality)
   };
 
   Foo.prototype.updateQuality = function () {
-    if (this.sellIn > 0) {
-      this.qualityReduceOne()
+    if (this.update.sellIn > 0) {
+      this.update.qualityReduceOne()
     } else {
-      this.qualityReduceOne()
-      this.qualityReduceOne()
-    }
-    this.floorQualityAtZero()
-  };
-
-  Foo.prototype.qualityReduceOne = function () {
-    this.quality -= 1
-  };
-
-  Foo.prototype.floorQualityAtZero = function () {
-    if (this.quality < 0) {
-      this.quality = 0
+      this.update.qualityReduceOne()
+      this.update.qualityReduceOne()
     }
   };
 
