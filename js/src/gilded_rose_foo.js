@@ -10,11 +10,16 @@
 
   Foo.prototype.updateQuality = function () {
     if (this.sellIn > 0) {
-      this.quality -= 1
+      this.qualityReduceOne()
     } else {
-      this.quality -= 2
+      this.qualityReduceOne()
+      this.qualityReduceOne()
     }
     this.floorQualityAtZero()
+  };
+
+  Foo.prototype.qualityReduceOne = function () {
+    this.quality -= 1
   };
 
   Foo.prototype.floorQualityAtZero = function () {

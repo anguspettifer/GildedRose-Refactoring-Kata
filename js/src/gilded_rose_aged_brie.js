@@ -10,11 +10,16 @@
 
   AgedBrie.prototype.updateQuality = function () {
     if (this.sellIn > 0) {
-      this.quality += 1
+      this.qualityIncreaseOne()
     } else {
-      this.quality += 2
+      this.qualityIncreaseOne()
+      this.qualityIncreaseOne()
     }
     this.capQualityAtFifty()
+  };
+
+  AgedBrie.prototype.qualityIncreaseOne = function () {
+    this.quality += 1
   };
 
   AgedBrie.prototype.capQualityAtFifty = function () {
