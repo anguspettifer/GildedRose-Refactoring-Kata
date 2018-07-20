@@ -2,6 +2,7 @@
   function AgedBrie(sellIn, quality){
     this.sellIn = sellIn
     this.quality = quality
+    this.update = new Update(sellIn, quality)
   };
 
   AgedBrie.prototype.updateSellIn = function () {
@@ -9,22 +10,11 @@
   };
 
   AgedBrie.prototype.updateQuality = function () {
-    if (this.sellIn > 0) {
-      this.qualityIncreaseOne()
+    if (this.update.sellIn > 0) {
+      this.update.qualityIncreaseOne()
     } else {
-      this.qualityIncreaseOne()
-      this.qualityIncreaseOne()
-    }
-    this.capQualityAtFifty()
-  };
-
-  AgedBrie.prototype.qualityIncreaseOne = function () {
-    this.quality += 1
-  };
-
-  AgedBrie.prototype.capQualityAtFifty = function () {
-    if (this.quality > 50) {
-      this.quality = 50
+      this.update.qualityIncreaseOne()
+      this.update.qualityIncreaseOne()
     }
   };
 
