@@ -1,6 +1,7 @@
 (function(exports){
-  function Sulfuras(sellin, quality){
-    this.sellin = sellin
+  function Sulfuras(sellIn, quality){
+    this.update = new Update(sellIn, quality)
+    this.sellIn = sellIn
     this.quality = quality
   };
 
@@ -9,7 +10,7 @@
   };
 
   Sulfuras.prototype.sellIn = function () {
-    return this.sellin
+    return this.sellIn
   };
 
   Sulfuras.prototype.updateQuality = function () {
