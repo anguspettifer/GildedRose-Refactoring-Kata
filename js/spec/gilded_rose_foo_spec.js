@@ -1,4 +1,6 @@
 // spy time?
+// These have just turned into feature tests rather than unit tests
+// I actually want to keep these as feature tests until I can combine them with the master feature
 
 describe("Foo", function() {
 

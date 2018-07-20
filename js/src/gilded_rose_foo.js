@@ -2,8 +2,6 @@
 
 (function(exports){
   function Foo(sellIn, quality){
-    this.sellIn = sellIn
-    this.quality = quality
     this.update = new Update(sellIn, quality)
   };
 
