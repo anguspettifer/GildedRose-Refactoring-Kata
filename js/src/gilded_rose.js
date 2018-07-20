@@ -27,8 +27,8 @@ class Shop {
       }
       item.updateQuality();
       item.updateSellIn();
-      this.items[i].sellIn = item.update.sellIn
-      this.items[i].quality = item.update.quality
+      this.items[i].sellIn = item.sellIn
+      this.items[i].quality = item.quality
     }
 
     // function item_chooser(sellIn, quality){
