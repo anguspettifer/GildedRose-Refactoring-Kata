@@ -31,6 +31,26 @@ class Shop {
       this.items[i].quality = item.update.quality
     }
 
+    // function item_chooser(sellIn, quality){
+    //   var choice = {
+    //     'Sulfuras, Hand of Ragnaros': Sulfuras,
+    //     Give the actual constructor function, not an instance thereof
+    //     'Aged Brie': new AgedBrie(sellIn, quality),
+    //     'Backstage passes to a TAFKAL80ETC concert': new BackstagePass(sellIn, quality),
+    //   }
+    // }
+    //
+    // for (var i = 0; i < this.items.length; i++) {
+    //   console.log(item_chooser);
+    //   item_chooser(this.items[i].sellIn, this.items[i].quality)
+    //   var item = item_chooser.choice[this.items[i]].name
+    //
+    //   item.updateQuality();
+    //   item.updateSellIn();
+    //   this.items[i].sellIn = item.update.sellIn
+    //   this.items[i].quality = item.update.quality
+    // }
+
     return this.items;
   }
 }

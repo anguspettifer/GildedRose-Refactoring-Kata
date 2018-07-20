@@ -1,39 +1,33 @@
 describe ('update', function(){
 
-  it("The sellin should reduce by one", function() {
-    const update = new Update(5,10);
-    update.sellOut();
-    expect(update.sellIn).toEqual(4);
-  });
-
   it("The quality should reduce by one", function() {
-    const update = new Update(5,10);
-    update.qualityReduceOne();
-    expect(update.quality).toEqual(9);
+    var current_quality = 10;
+    var amount_to_change_by = -1;
+    expect(Update.changeQuality(amount_to_change_by,current_quality)).toEqual(9);
   });
 
   it("The quality should increase by one", function() {
-    const update = new Update(5,10);
-    update.qualityIncreaseOne();
-    expect(update.quality).toEqual(11);
+    var current_quality = 10;
+    var amount_to_change_by = 1;
+    expect(Update.changeQuality(amount_to_change_by,current_quality)).toEqual(11);
   });
 
   it("The quality is capped at 50", function() {
-    const update = new Update(5,50);
-    update.qualityIncreaseOne();
-    expect(update.quality).toEqual(50);
+    var current_quality = 50;
+    var amount_to_change_by = 1;
+    expect(Update.changeQuality(amount_to_change_by,current_quality)).toEqual(50);
   });
 
   it("The quality is floored at 0", function() {
-    const update = new Update(5,0);
-    update.qualityReduceOne();
-    expect(update.quality).toEqual(0);
+    var current_quality = 0;
+    var amount_to_change_by = -1;
+    expect(Update.changeQuality(amount_to_change_by,current_quality)).toEqual(0);
   });
-
-  it("The quality is set to 0", function() {
-    const update = new Update(5,30);
-    update.qualitySetToZero();
-    expect(update.quality).toEqual(0);
-  });
+  //
+  // it("The quality is set to 0", function() {
+  //   const update = new Update(5,30);
+  //   update.qualitySetToZero();
+  //   expect(update.quality).toEqual(0);
+  // });
 
 })
