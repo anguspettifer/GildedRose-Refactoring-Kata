@@ -1,8 +1,6 @@
 (function(exports){
   function Sulfuras(sellIn, quality){
     this.update = new Update(sellIn, quality)
-    this.sellIn = sellIn
-    this.quality = quality
   };
 
   Sulfuras.prototype.updateSellIn = function () {

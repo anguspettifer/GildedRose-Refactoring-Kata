@@ -2,7 +2,7 @@ describe("BackstagePass", function() {
 
   it("The sellin should reduce by one", function() {
     const backstagePass = new BackstagePass(5,10);
-    backstagePass.update.sellOut();
+    backstagePass.updateSellIn();
     expect(backstagePass.update.sellIn).toEqual(4);
   });
 

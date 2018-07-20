@@ -3,6 +3,10 @@
     this.update = new Update(sellIn, quality)
   };
 
+  BackstagePass.prototype.updateSellIn = function () {
+    this.update.sellOut()
+  };
+
   BackstagePass.prototype.updateQuality = function () {
     if (this.update.sellIn > 10) {
       this.update.qualityIncreaseOne()

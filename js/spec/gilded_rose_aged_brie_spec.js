@@ -3,7 +3,7 @@ describe("AgedBrie", function() {
 
   it("The sellin should reduce by one", function() {
     const agedBrie = new AgedBrie(5,10);
-    agedBrie.update.sellOut();
+    agedBrie.updateSellIn();
     expect(agedBrie.update.sellIn).toEqual(4);
   });
 

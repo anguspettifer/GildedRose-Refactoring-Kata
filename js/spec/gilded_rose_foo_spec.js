@@ -6,7 +6,7 @@ describe("Foo", function() {
 
   it("The sellin should reduce by one", function() {
     const foo = new Foo(5,10);
-    foo.update.sellOut()
+    foo.updateSellIn()
     expect(foo.update.sellIn).toEqual(4);
   });
 
