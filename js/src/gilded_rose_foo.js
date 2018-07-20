@@ -1,18 +1,20 @@
 (function(exports){
+  // const unit_reduction = -1.. how do I get this to work?
+
   function Foo(sellIn, quality){
-    this.update = new Update(sellIn, quality)
+    this.sellIn = sellIn
+    this.quality = quality
   };
 
   Foo.prototype.updateSellIn = function () {
-    this.update.sellOut()
+    this.sellIn -= 1
   };
 
   Foo.prototype.updateQuality = function () {
-    if (this.update.sellIn > 0) {
-      this.update.qualityReduceOne()
+    if (this.sellIn > 0) {
+      this.quality = Update.changeQuality(-1, this.quality)
     } else {
-      this.update.qualityReduceOne()
-      this.update.qualityReduceOne()
+      this.quality = Update.changeQuality(-2, this.quality)
     }
   };
 

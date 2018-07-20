@@ -1,15 +1,16 @@
 (function(exports){
   function AgedBrie(sellIn, quality){
-    this.update = new Update(sellIn, quality)
+    this.sellIn = sellIn
+    this.quality = quality
   };
 
   AgedBrie.prototype.updateSellIn = function () {
-    this.update.sellOut()
+    this.sellIn -= 1
   };
 
   AgedBrie.prototype.updateQuality = function () {
     if (this.update.sellIn > 0) {
-      this.update.qualityIncreaseOne()
+      this.quality = Update.changeQuality(1,this.quality)
     } else {
       this.update.qualityIncreaseOne()
       this.update.qualityIncreaseOne()
