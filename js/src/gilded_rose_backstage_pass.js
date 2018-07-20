@@ -1,24 +1,22 @@
 (function(exports){
   function BackstagePass(sellIn, quality){
-    this.update = new Update(sellIn, quality)
+    this.sellIn = sellIn
+    this.quality = quality
   };
 
   BackstagePass.prototype.updateSellIn = function () {
-    this.update.sellOut()
+    this.sellIn -= 1
   };
 
   BackstagePass.prototype.updateQuality = function () {
-    if (this.update.sellIn > 10) {
-      this.update.qualityIncreaseOne()
-    } else if (this.update.sellIn > 5) {
-      this.update.qualityIncreaseOne()
-      this.update.qualityIncreaseOne()
-    } else if (this.update.sellIn > 0) {
-      this.update.qualityIncreaseOne()
-      this.update.qualityIncreaseOne()
-      this.update.qualityIncreaseOne()
-    } else if (this.update.sellIn < 1) {
-      this.update.qualitySetToZero()
+    if (this.sellIn > 10) {
+      this.quality = Update.changeQuality(1,this.quality)
+    } else if (this.sellIn > 5) {
+      this.quality = Update.changeQuality(2,this.quality)
+    } else if (this.sellIn > 0) {
+      this.quality = Update.changeQuality(3,this.quality)
+    } else if (this.sellIn < 1) {
+      this.quality = 0
     }
   };
 
