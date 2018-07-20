@@ -1,5 +1,3 @@
-// spy time?
-
 (function(exports){
   function Foo(sellIn, quality){
     this.update = new Update(sellIn, quality)

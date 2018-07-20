@@ -12,11 +12,6 @@ class Shop {
   constructor(items=[]){
     this.items = items;
   }
-// whats my issue?
-// this.items.sellIn has been passed as an argument, which is updated
-// But the origonal piece of data is not updated.
-// we need to pass the whole object, not just the data.
-
 
   // Do alter this
   update() {
@@ -34,7 +29,6 @@ class Shop {
       item.updateSellIn();
       this.items[i].sellIn = item.update.sellIn
       this.items[i].quality = item.update.quality
-
     }
 
     return this.items;
