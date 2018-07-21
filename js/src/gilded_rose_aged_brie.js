@@ -10,9 +10,9 @@
 
   AgedBrie.prototype.updateQuality = function () {
     if (this.sellIn > 0) {
-      this.quality = Update.changeQuality(1,this.quality)
+      this.quality = QualityContoller.changeQuality(1,this.quality)
     } else {
-      this.quality = Update.changeQuality(2,this.quality)
+      this.quality = QualityContoller.changeQuality(2,this.quality)
     }
   };
 
