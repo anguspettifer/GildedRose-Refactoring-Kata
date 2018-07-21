@@ -16,7 +16,7 @@
     } else if (this.sellIn > 0) {
       this.quality = QualityContoller.changeQuality(3,this.quality)
     } else if (this.sellIn < 1) {
-      this.quality = 0
+      this.quality = QualityContoller.changeQuality(this.quality * -1, this.quality)
     }
   };
 
