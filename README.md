@@ -6,12 +6,10 @@ This Kata was originally created by Terry Hughes (http://twitter.com/TerryHughes
 
 ## Set up
 
-Fork and clone this repo
-
-Navigate to the JS directory in your command line
-Run `node` to open the JS REPL
-Run the following commands:
-
+- Fork and clone this repo
+- Navigate to the JS directory in your command line
+- Run `node` to open the JS REPL
+- Run the following commands:
 
 ```
 .load ./src/gilded_rose.js
@@ -42,7 +40,7 @@ items[0].quality
 ```
 
 #### Running tests
-Run `Open SpecRunner.html`
+Run `open SpecRunner.html`
 
 ## My process
 
@@ -57,7 +55,7 @@ Step 2 Create a suite of feature tests that passed using the legacy code base
 Step 3 More detailed diagram:
 <img src="/js/assets/images/Gilded_rose_diagram_2.png" width="750px" />
 
-Step 4 TDD each item in separate classes
+Step 4 TDD each item in their respective classes according to the above diagram
 
 Step 5 TDD the 'Update Quality' class
 
